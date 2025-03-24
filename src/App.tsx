@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, ChevronDown, Code, Server, Shield, Briefcase, GraduationCap, Award, Sparkles, Globe, Cpu } from 'lucide-react';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    document.documentElement.classList.add("dark");
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
